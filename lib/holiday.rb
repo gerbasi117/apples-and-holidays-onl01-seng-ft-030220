@@ -20,11 +20,15 @@ def second_supply_for_fourth_of_july(holiday_hash)
   # return the second element in the 4th of July array
 end
 
-def add_supply_to_winter_holidays(holiday_hash, supply)
-  # holiday_hash is identical to the one above
-  # add the second argument, which is a supply, to BOTH the
-  # Christmas AND the New Year's arrays
-
+def all_supplies(holiday_supplies)
+  holiday_supplies.each do |season, data|
+    puts "#{season.to_s.capitalize!}:"
+    data.each do |holiday, supply|
+str_holiday = holiday.to_s.split("_").collect {|word| word.capitalize!}.join(" ")
+puts "  #{str_holiday}: #{supply.join(", ")}"
+    end
+  end 
+end 
 end
 
 
